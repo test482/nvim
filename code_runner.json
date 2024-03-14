@@ -1,0 +1,11 @@
+{
+    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir/$fileNameWithoutExt",
+    "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir/$fileNameWithoutExt",
+    "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+    "javascript": "node",
+    "powershell": "powershell -ExecutionPolicy ByPass -File",
+    "python": "cd $dir && python -u $fileName",
+    "rust": "cd $dir && cargo build && cargo run",
+    "shellscript": "bash",
+    "zig": "zig run"
+}
