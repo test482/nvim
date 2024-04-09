@@ -3,13 +3,12 @@
 -- Add any additional keymaps here
 
 local keymap = vim.keymap
-local opts = { noremap = true, silent = true }
 
 -- code runner
-keymap.set('n', '<leader>r', ':RunCode<CR>', opts)
-keymap.set('n', '<leader>rf', ':RunFile<CR>', opts)
-keymap.set('n', '<leader>rft', ':RunFile tab<CR>', opts)
-keymap.set('n', '<leader>rp', ':RunProject<CR>', opts)
-keymap.set('n', '<leader>rc', ':RunClose<CR>', opts)
-keymap.set('n', '<leader>crf', ':CRFiletype<CR>', opts)
-keymap.set('n', '<leader>crp', ':CRProjects<CR>', opts)
+keymap.set("n", "<leader>crf", ":CRFiletype<CR>", { silent = true, desc = "code runner files json" })
+keymap.set("n", "<leader>crp", ":CRProjects<CR>", { silent = true, desc = "code runner projects json" })
+keymap.set("n", "<leader>r", ":RunCode<CR>", { silent = false, desc = "Run Code" })
+keymap.set("n", "<leader>rf", ":RunFile<CR>", { silent = false, desc = "[F]ile" })
+keymap.set("n", "<leader>rp", ":RunProject<CR>", { silent = false, desc = "[P]roject" })
+keymap.set("n", "<leader>rt", ":RunFile tab<CR>", { silent = false, desc = "[T]ab mode" })
+keymap.set("n", "<leader>rw", ":RunClose<CR>", { silent = false, desc = "Close runner" })
